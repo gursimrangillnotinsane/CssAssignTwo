@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap');
+
+
+
+#container {
+    margin: 3% 25%;
+    border: 2px solid black;
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+}
+
+header h1 em {
+    color: red;
+    text-transform: lowercase;
+    font-style: normal;
+}
+
+header h1 {
+    font-size: 4em;
+    font-weight: bolder;
+    font-family: "Fragment Mono", monospace;
+    letter-spacing: 7px;
+    margin: 0;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    width: 20%;
+    float: right;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Adjust column widths as needed */
+    grid-template-rows: auto auto auto;
+    /* Adjust row heights as needed */
+    grid-template-areas:
+        "sidebar article"
+        "sidebar image"
+        "footercontent article2";
+    /* Add grid-template-columns and grid-template-rows as needed */
+    grid-gap: 3%;
+}
+
+main aside:first-of-type {
+    grid-area: sidebar;
+    /* border-right: 1px sloid black; */
+}
+
+main aside:first-of-type p {
+    padding: 10px;
+    line-height: 2.5em;
+    padding-left: 2em;
+}
+
+main article:first-child {
+    grid-area: article;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main article:first-child h2 {
+    color: red;
+}
+
+main img {
+    grid-area: image;
+}
+
+main aside:last-child {
+    grid-area: footercontent;
+    background-color: rgba(158, 164, 164, 0.421);
+}
+
+main article:last-of-type {
+    grid-area: article2;
+}
+
+main aside:last-child h2 {
+    color: red;
+}
