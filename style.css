@@ -24,11 +24,12 @@ header h1 {
     font-family: "Fragment Mono", monospace;
     letter-spacing: 7px;
     margin: 0;
+    display: inline-block;
 }
 
-header div {
-    display: flex;
-    justify-content: space-between;
+header p {
+    position: relative;
+    top: 0;
 }
 
 header img {
