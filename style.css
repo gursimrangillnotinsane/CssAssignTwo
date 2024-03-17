@@ -23,7 +23,7 @@ header {
 header img {
     grid-area: image;
     grid-column-end: 3;
-    width: 40%;
+    width: 100px;
     justify-self: end;
 }
 
@@ -184,4 +184,26 @@ main article:last-of-type p::first-line {
 
 main article:last-of-type p mark {
     background-color: rgba(217, 214, 214, 0.541)
+}
+
+footer em,
+footer abbr {
+    font-weight: bold;
+    font-style: normal;
+}
+
+@media only screen and (max-width: 1076px) {
+    #container {
+        margin: 0;
+        border: none;
+    }
+
+    header h1 {
+        font-size: 3.5em;
+    }
+
+    header img {
+        width: 90px;
+
+    }
 }
