@@ -2,63 +2,72 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
 
-
-#container {
-    margin: 3% 25%;
-    padding-left: 0;
-    border: 2px solid black;
+/* default for all the elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    display: grid;
-
-    grid-template-areas:
-        "topic topic"
-        "header image";
-}
-
-
-
-
-header img {
-    grid-area: image;
-    grid-column-end: 3;
-    width: 100px;
-    justify-self: end;
-}
-
-header p {
-    grid-area: topic;
-    text-transform: uppercase;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* setting all the p to a small size and margin 0 */
+p {
+    font-size: .8em;
     margin: 0;
 }
 
+/* for hyoerlinks to make them more bold and remove the underline */
+a {
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
 
+/* main div to make it small */
+#container {
+    width: 700px;
+    margin: 40px auto;
+    position: relative;
 
+}
+
+/* make the h1 in header bolder, lowercase, and set it's position right */
+header h1 {
+    text-transform: lowercase;
+    font-size: 4.4em;
+    font-weight: 900;
+    font-family: "Chivo Mono", sans-serif;
+    top: 1px;
+    position: absolute;
+    left: -3px;
+    margin: 0;
+}
+
+/* make the em red and remove the italic  */
 header h1 em {
     color: red;
     font-style: normal;
 }
 
-header h1 {
-    grid-area: header;
-    text-transform: lowercase;
-    font-size: 5em;
-    font-weight: 900;
-    font-family: "Chivo Mono", monospace;
-    margin: 0;
-    display: inline-block;
+/* makes the image smaller and set its position */
+header img {
+    position: absolute;
+    width: 150px;
+    right: 30px;
+    top: 15px;
+    height: 129px;
 }
 
+/* set the p in header to uppercase and apply font */
 header p {
-    position: relative;
-    top: 0;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
-
-
+/* set the main padding, border and grid and defin grid-areas to make all the content fit better  */
 main {
+    padding-top: 130px;
+    border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
@@ -68,7 +77,8 @@ main {
 }
 
 
-
+/* the first aside in main */
+/* settign its aread as sidebar and defining its font and padding as well as border */
 main aside:first-of-type {
 
     grid-area: sidebar;
@@ -82,6 +92,8 @@ main aside:first-of-type {
 
 }
 
+/* the first article in main  */
+/* applying fonts and margin */
 main article:first-child {
     grid-area: article;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -89,18 +101,23 @@ main article:first-child {
 
 }
 
+/* the last article in main */
+/* applying grid-area */
 main article:last-of-type {
     grid-area: article2;
 }
 
+/* the image in main */
+/* applying grod-area as well as marign and width */
 main img {
     grid-area: image;
     margin-bottom: 0;
-    width: 80%;
-    height: 100%;
+    width: 100%;
 
 }
 
+/* the last aside in main */
+/* maving it up by maring:-50% and applying background color to it as wella s some padding */
 main aside:last-child {
     margin-top: -50%;
     grid-area: footercontent;
@@ -108,39 +125,36 @@ main aside:last-child {
     padding: 5%;
 }
 
-
+/* applying same padding to all the article as well as image in main  */
 main article,
 main img {
     padding: 0% 8%;
 }
 
-
+/* the h2 in first article */
+/* making it red  as definign the size*/
 main article:first-child h2 {
     color: red;
     font-size: 1.7em;
 
 }
 
-
-main article:first-child p,
-main article:last-of-type p,
-main aside:last-child p,
-main aside:last-child li p {
-    font-size: .8em;
-    margin: 0;
+/* changing the font-size of p in aside to a bigger one */
+main aside:first-of-type p {
+    font-size: 1em;
 }
 
-
-
-
-
+/* h2 in last aside */
+/* changing its color as well as other properties to make it look similar */
 main aside:last-child h2 {
     color: red;
     font-weight: 500;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* h2 in last article */
+/* chaning its font as well as other properties to make it look similar */
 main article:last-of-type h2 {
     font-family: "Radio Canada", sans-serif;
     font-size: 3.5em;
@@ -149,16 +163,39 @@ main article:last-of-type h2 {
     margin: 0;
 }
 
+/*first letter in h2 of  last article  */
+/* chaniing it to upper case */
 main article:last-of-type h2::first-letter {
     text-transform: uppercase;
 }
 
+/* last aside h3 in li */
+/* making margin:0 and other to make it look good */
 main aside:last-child li h3 {
     font-size: .8em;
     margin: 0;
     font-weight: 600;
+    margin-top: 10px;
+    display: inline;
 }
 
+/* adding the '+' sign before h2 of last article */
+main aside:last-child h2::before {
+    content: "+";
+    margin-right: 4px;
+    font-size: 3em;
+    vertical-align: sub;
+    line-height: 0.8;
+    color: black;
+}
+
+/* adding '+' sign to every li in last aside */
+main aside:last-child li::before {
+    content: "+";
+    margin-right: 4px;
+}
+
+/* clearing the default list-style of last aside  */
 main aside:last-child ul {
     list-style-type: none;
     margin-top: 0;
@@ -166,44 +203,82 @@ main aside:last-child ul {
 
 }
 
+/* applying font to p in last aside */
 main aside:last-child p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-a {
-    font-weight: bold;
-    color: #000;
-}
-
-
+/* making the first line of P bold in */
+/* first aside */
 main aside:first-of-type p::first-line,
+/* first article */
 main article:first-child p::first-line,
+/* last article */
 main article:last-of-type p::first-line {
     font-weight: 600;
 }
 
+/* changing the background color of mark tag in last article */
 main article:last-of-type p mark {
     background-color: rgba(217, 214, 214, 0.541)
 }
 
+/* Changing the font style of  footer */
 footer em,
 footer abbr {
     font-weight: bold;
     font-style: normal;
 }
 
-@media only screen and (max-width: 1076px) {
+/* media queries  */
+/* for devices with width less then 426 px */
+@media only screen and (max-width: 426px) {
+
+    /* applying some padding  */
     #container {
+        padding: 10%;
         margin: 0;
-        border: none;
     }
 
+    /* adjustiing the position of header elements */
     header h1 {
-        font-size: 3.5em;
+        font-size: 5em;
+        top: 43px;
+        left: 37px;
     }
 
     header img {
-        width: 90px;
-
+        width: 137px;
+        top: 59px;
+        right: 71px;
     }
+
+    /* adjustiin the main element */
+    main {
+        padding-top: 140px;
+    }
+}
+
+/* for devices with widht more then 427 and less then 720 px */
+@media only screen and (min-width:427px) and (max-width: 720px) {
+
+    /* reducing the margin */
+    #container {
+        padding: 2%;
+        margin: 0;
+    }
+
+    /* making header elements fit better */
+    header h1 {
+        font-size: 5em;
+        top: 18px;
+        left: 12px;
+    }
+
+    header img {
+        width: 137px;
+        top: 34px;
+        right: 53px;
+    }
+
 }
