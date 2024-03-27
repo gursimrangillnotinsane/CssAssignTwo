@@ -230,47 +230,79 @@ footer abbr {
     font-style: normal;
 }
 
+
+
+footer a {
+    color: black;
+}
+
+/* stylring the go to top button*/
+footer a.top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: rgb(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    visibility: hidden;
+}
+
+
 /* media queries  */
-/* for devices with width less then 426 px */
-@media only screen and (max-width: 426px) {
+/* for devices with width less then 430 px */
+@media only screen and (max-width: 430px) {
 
     /* applying some padding  */
     #container {
-        padding: 10%;
+        padding: 2%;
         margin: 0;
+        width: auto;
     }
 
     /* adjustiing the position of header elements */
     header h1 {
-        font-size: 5em;
-        top: 43px;
-        left: 37px;
+        font-size: 3em;
+        top: 12px;
+        left: 6px;
     }
 
     header img {
-        width: 137px;
-        top: 59px;
-        right: 71px;
+        width: 20%;
+        height: 6%;
+        top: 23px;
+        right: 23px;
     }
 
     /* adjustiin the main element */
     main {
         padding-top: 140px;
     }
+
+    /* decreasing the padding */
+    main aside:first-of-type {
+        padding: 1em;
+    }
+
+    /* decreaasing the font-size */
+    main article:last-of-type h2 {
+        font-size: 2.5em;
+    }
 }
 
-/* for devices with widht more then 427 and less then 720 px */
-@media only screen and (min-width:427px) and (max-width: 720px) {
+/* for devices with widht more then 430px and less then 720 px */
+@media only screen and (min-width:431px) and (max-width: 720px) {
 
     /* reducing the margin */
     #container {
         padding: 2%;
         margin: 0;
+        width: auto;
     }
 
     /* making header elements fit better */
     header h1 {
-        font-size: 5em;
+        font-size: 3.5em;
         top: 18px;
         left: 12px;
     }
